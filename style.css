@@ -17,6 +17,7 @@ a {
 header {
   position: fixed;
   top: 0;
+  z-index: 99;
   width: calc(100vw - 1.5rem);
   padding: 0.5rem 0.8rem;
   display: grid;
@@ -87,7 +88,7 @@ footer {
   width: calc(100vw - 1.5rem);
   font-size: 0.8em !important;
   text-align: center;
-  z-index: 1; }
+  z-index: 0; }
   footer .footer-nav {
     font-size: 0.9em !important;
     text-transform: uppercase; }
