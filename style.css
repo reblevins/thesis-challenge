@@ -6,7 +6,7 @@
   padding: 0; }
 
 body {
-  background: linear-gradient(rgba(66, 27, 61, 0.65), rgba(66, 27, 61, 0.65)), url(wood-working.jpg);
+  background: linear-gradient(rgba(66, 27, 61, 0.85), rgba(66, 27, 61, 0.85)), url(wood-working.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -155,12 +155,23 @@ footer {
     font-size: 1.1em !important; } }
 
 @media all and (min-width: 1024px) {
+  header {
+    grid-template-columns: 15% 1fr 15%;
+    padding: 1.5em 2em; }
+  .hamburger {
+    display: none; }
+  .main-nav.desktop {
+    justify-self: center;
+    display: block; }
+    .main-nav.desktop li {
+      display: inline-block;
+      padding: 0 1em; }
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5em;
     width: 80%;
-    margin: 5em auto 2em auto; }
+    margin: 15em auto 2em auto; }
   footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
