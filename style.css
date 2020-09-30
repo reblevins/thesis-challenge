@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0; }
+
+.main {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(66, 27, 61, 0.65), rgba(66, 27, 61, 0.65)), url(workplace.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+a {
+  text-decoration: none; }
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  align-items: center;
+  padding: 0.5em 0.8em; }
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  margin: 0 0.15em 0.1em 0; }
+  .hamburger input {
+    display: none; }
+  .hamburger .layer {
+    z-index: 1;
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+  .hamburger .layer-1 {
+    top: 0; }
+  .hamburger .layer-2 {
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+  .hamburger .layer-3 {
+    bottom: 0; }
+  .hamburger input:checked ~ .layer-1 {
+    transform: translateY(10px) translateY(-50%) rotate(-45deg); }
+  .hamburger input:checked ~ .layer-2 {
+    opacity: 0; }
+  .hamburger input:checked ~ .layer-3 {
+    transform: translateY(-10px) translateY(50%) rotate(45deg); }
+  .hamburger .main-nav {
+    height: 100vh;
+    width: 100vw;
+    margin: -100px 0 0 50px;
+    padding: 50px;
+    padding-top: 125px;
+    position: absolute;
+    background: black;
+    transform-origin: 0% 0%;
+    transform: translate(62%, 0);
+    transition: all 0.5s ease;
+    left: 0;
+    top: 0; }
+    .hamburger .main-nav li {
+      padding-bottom: 1rem; }
+  .hamburger input:checked ~ .main-nav {
+    transform: translate(-62%, 0); }
+
+.main-nav {
+  list-style: none;
+  font-size: 1.5em; }
+
+.main-nav.desktop {
+  display: none; }
+
+.content {
+  margin: 3em 2em; }
+  .content h2 {
+    font-size: 3em; }
+  .content p {
+    font-size: 1.4em;
+    margin: 1rem 0; }
+  .content .form-inner {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px; }
+  .content input {
+    width: 100%;
+    font-size: 1em;
+    padding: 1rem;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-width: 0 0 1px 0;
+    color: white; }
+    .content input::placeholder {
+      color: white; }
