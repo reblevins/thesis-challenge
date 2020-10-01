@@ -85,7 +85,7 @@ header, footer {
 
 .main-nav, .footer-nav {
   list-style: none;
-  font-size: 1.5em; }
+  font-size: 1.2em; }
 
 .main-nav.desktop {
   display: none; }
@@ -188,8 +188,9 @@ footer {
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5em;
-    width: 80%;
+    grid-column-gap: 10em;
+    width: 70%;
+    max-width: 1024px;
     margin: 15em auto 2em auto; }
   footer {
     display: grid;
