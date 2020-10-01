@@ -10,7 +10,7 @@
 
 <div class="main">
     <header id="header">
-        <h1>Stamp</h1>
+        <h1><a href="#">Stamp</a></h1>
 
         <ul class="main-nav desktop">
             <li><a href="#">About</a></li>
@@ -45,7 +45,9 @@
             <div class="form-inner">
                 <input type="text" placeholder="Name">
                 <input type="text" placeholder="Email">
-                <input class="password" type="text" placeholder="Password">
+            	<input id="password" type="password" placeholder="Password">
+				<img id="show" class="eye-con" src="eye-regular.svg" alt="Toggle password visibility">
+				<img id="hide" class="eye-con hidden" src="eye-slash-regular.svg" alt="Toggle password visibility">
             </div>
             <button>Sign up ></button>
             <div class="form-footer">
@@ -72,6 +74,7 @@
 let last_known_scroll_position = 0;
 let header = document.getElementById('header');
 let footer = document.getElementById('footer');
+
 function changeOpacity(e) {
     footer.classList = [];
     console.log(e)
@@ -86,6 +89,21 @@ function changeOpacity(e) {
         footer.classList = [];
     }
 }
+
+let show = document.getElementById('show');
+let hide = document.getElementById('hide');
+let password = document.getElementById('password');
+show.addEventListener('click', function(event) {
+	hide.classList.toggle('hidden');
+	show.classList.toggle('hidden');
+	password.type = "text";
+})
+hide.addEventListener('click', function(event) {
+	hide.classList.toggle('hidden');
+	show.classList.toggle('hidden');
+	password.type = "password";
+})
+
 window.addEventListener('scroll', changeOpacity);
 window.addEventListener("orientationchange", changeOpacity);
 </script>
