@@ -92,8 +92,6 @@ header, footer {
 
 footer {
   padding: 0.8rem;
-  position: fixed;
-  bottom: 0;
   width: calc(100vw - 1.5rem);
   font-size: 0.8em !important;
   text-align: center;
@@ -193,6 +191,8 @@ footer {
     max-width: 1024px;
     margin: 15em auto 2em auto; }
   footer {
+    position: fixed;
+    bottom: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0.8rem 2rem;
